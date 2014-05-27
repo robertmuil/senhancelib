@@ -66,7 +66,7 @@ The client can connect to the other device via BluetoothPacketConnection or Fram
 
 ## Tactile Output ##
 
-![Diagram of Frequency Modulation for HeartOut DataSink"](HeartOut_FM.png?raw=true "Frequency Modulation for HeartOut DataSink")
+!["Diagram of Frequency Modulation for HeartOut DataSink"](HeartOut_FM.png?raw=true "Frequency Modulation for HeartOut DataSink")
 
 
 Implemented in the `HeartOut` class of the `heartFelt` application, tactile output is generated with frequency modulation using the ECG signal as the baseband (envelope). In the experiments, the frequency range of the carrier is between 1Hz and 100Hz, which manifests as a tactile signal that is barely audible. The carrier can though be made much higher, with a peak at 12000Hz and thereby in the audible range. This manifests then in an audible representation of the raw ECG, similar to what one hears in a hospital.
@@ -85,6 +85,6 @@ All classes based on `DummySourceThread` have noise and transient response imple
 
 Here is an example of the heartrate output of the DummyECG implementing this model, showing 3 subsequent transient responses (W stage is not currently implemented):
 
-||[[Image(source:software/android/SenhanceLib/CardiacTransientResponseExample-v0.1.svg, 800px)]]||
+![Example of Cardiac Transient Response](CardiacTransientResponseExample-v0.1.png "Example of Cardiac Transient Response")
 ||'''u_length''': 1500msecs ||
 ||'''transition_rate''': 10 bpm/sec ||
