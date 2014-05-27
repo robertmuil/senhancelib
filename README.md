@@ -15,7 +15,7 @@ Author: rmuil@uos.de
 
 ## Overview ##
 
-![Alt text](/DataSourceSink.png?raw=true "DataSource and DataSink")
+![Diagram of the basic DataSink/DataSource infrastructure](/DataSourceSink.svg?raw=true "Diagram of the basic DataSink/DataSource infrastructure")
 
 This includes common code that will be used by all or many of the software projects under the Senhance (''previously VIPSE'') project, including heartFelt. At the moment, the only other software package is the `CompassSimulator` which is used to control the ISEP belt over an RFCOMM bluetooth connection by simulating the GX1 compass.
 
