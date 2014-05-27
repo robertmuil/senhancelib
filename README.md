@@ -81,10 +81,10 @@ The rate of artificial ECG data is controlled just by changing the R-R intervals
 
 All classes based on `DummySourceThread` have noise and transient response implemented. A transient response can be started and ended and in between the heart-rate is simulated according to the model depicted here:
 
-[[Image(source:software/android/SenhanceLib/CardiacTransientResponseModel.svg, 800px)]]
+!["Model of Transient Response of DummySourceThread"](CardiacTransientResponseModel.png "Model of Transient Response of DummySourceThread")
 
 Here is an example of the heartrate output of the DummyECG implementing this model, showing 3 subsequent transient responses (W stage is not currently implemented):
 
-![Example of Cardiac Transient Response](CardiacTransientResponseExample-v0.1.png "Example of Cardiac Transient Response")
-||'''u_length''': 1500msecs ||
-||'''transition_rate''': 10 bpm/sec ||
+![Example of Cardiac Transient Response](CardiacTransientResponseExample-v1.0.png "Example of Cardiac Transient Response")
+`u_length`: 1500 millisecs
+`transition_rate`: 10 bpm/sec
