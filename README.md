@@ -15,7 +15,7 @@ Author: rmuil@uos.de
 
 ## Overview ##
 
-![Diagram of the basic DataSink/DataSource infrastructure](/DataSourceSink.svg?raw=true "Diagram of the basic DataSink/DataSource infrastructure")
+![Diagram of the basic DataSink/DataSource infrastructure](/DataSourceSink.png?raw=true "Diagram of the basic DataSink/DataSource infrastructure")
 
 This includes common code that will be used by all or many of the software projects under the Senhance (''previously VIPSE'') project, including heartFelt. At the moment, the only other software package is the `CompassSimulator` which is used to control the ISEP belt over an RFCOMM bluetooth connection by simulating the GX1 compass.
 
@@ -36,7 +36,7 @@ At the moment, device connection is abstracted in the `DataSource` class. This m
 
 Device state consists of:
 
-[[Image(source:software/android/SenhanceLib/DeviceConnectionStates.png, 700px, align=right)]]
+!["Diagram of Device Connection States"](DeviceConnectionStates.png?raw=true "Device Connection States")
  1. Disconnected
  1. Connecting
  1. Connected
@@ -58,15 +58,15 @@ Currently, the implementations of `DataSource` which exist and thus implement th
 
 SenhanceLib contains utilities which encapsulate the bluetooth communication and offer a packet based API. 
 
-[[Image(source:software/android/SenhanceLib/Bluetooth_architecture.png, 800px)]]
+!["Diagram of Bluetooth Architecture"](Bluetooth_architecture.png?raw=true "Bluetooth Architecture")
 
 The client can connect to the other device via BluetoothPacketConnection or FramedPacketConnection. BluetoothPacketConnection treats each received byte as a packet and delegates it to the client via the interface PacketConnectionHandler, which the client has to implement. FramedPacketConnection can be used for packets with variable length. They are bounded by a start- and end-byte. These bytes can also be part of the packet content when an escape byte is used. The next figure shows how the packet is processed.
 
-[[Image(source:software/android/SenhanceLib/PacketConnectionStates.png, 800px)]]
+!["Diagram of Packet Connection States"](PacketConnectionStates.png?raw=true "Packet Connection States")
 
 ## Tactile Output ##
 
-[[Image(source:software/android/heartFelt/HeartOut_FM.svg, 500px, align=right)]]
+![Diagram of Frequency Modulation for HeartOut DataSink"](HeartOut_FM.png?raw=true "Frequency Modulation for HeartOut DataSink")
 
 
 Implemented in the `HeartOut` class of the `heartFelt` application, tactile output is generated with frequency modulation using the ECG signal as the baseband (envelope). In the experiments, the frequency range of the carrier is between 1Hz and 100Hz, which manifests as a tactile signal that is barely audible. The carrier can though be made much higher, with a peak at 12000Hz and thereby in the audible range. This manifests then in an audible representation of the raw ECG, similar to what one hears in a hospital.
